@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <form action="/register" method="post">
+        <div id="Register">
+            <h2>Register</h2>
+         </div>
+
+        <div class="input-field">
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+        </div>
+        <div class="input-field">
+            <input type="password" name="password" id="password" placeholder="Enter Password">
+        </div>
+        <input type="submit" value="Register">
+        <% if (locals.usernametaken) { %>
+            <p id="usernametaken"><%= usernametaken%></p>
+        <% } %>
+        <% if (locals.passwordtooshort) { %>
+            <p id="passwordtooshort"><%= passwordtooshort%></p>
+        <% } %>
+    </form>
+
+</body>
+</html>

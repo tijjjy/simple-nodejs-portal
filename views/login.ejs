@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <form action="/login" method="post">
+        <div id="login">
+            <h2>Login</h2>
+         </div>
+
+        <div class="input-field">
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+        </div>
+        <div class="input-field">
+            <input type="password" name="password" id="password" placeholder="Enter Password">
+        </div>
+        <input type="submit" value="Login">
+        <% if (locals.login_failed) { %>
+            <p id="login_failed"><%= login_failed %></p>
+        <% } %>
+    </form>
+    <a id="register" href="/register">Register</a>
+</body>
+</html>
